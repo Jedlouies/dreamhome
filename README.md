@@ -1,0 +1,1 @@
+This project is a database-driven management system designed for Wellmeadows Hospital, a specialized healthcare facility in Edinburgh that focuses on care for elderly patients. The system streamlines the hospital's day-to-day operations, ranging from staff scheduling and patient registration to medication tracking and inventory management.
