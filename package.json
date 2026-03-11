@@ -1,0 +1,21 @@
+{
+  "name": "dreamhome",
+  "version": "1.0.0",
+  "description": "This project is a database-driven management system designed for Wellmeadows Hospital, a specialized healthcare facility in Edinburgh that focuses on care for elderly patients. The system streamlines the hospital's day-to-day operations, ranging from staff scheduling and patient registration to medication tracking and inventory management.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jedlouies/dreamhome.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jedlouies/dreamhome/issues"
+  },
+  "homepage": "https://github.com/Jedlouies/dreamhome#readme"
+}
