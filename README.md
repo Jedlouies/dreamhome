@@ -63,13 +63,6 @@ The system manages branch offices, staff, properties, renters, leases, and inspe
    ```
 ---
 
-## 👥 Team Roles
-- Database Architect: ERD, schema, triggers, procedures.
-- Backend Developer: API endpoints, DB integration.
-- Frontend Developer: React components, routing, state management.
-- UI/UX Designer: Styling, layout, accessibility.
-- Integrator: QA, documentation, deployment.
-
 ## 📊 Case Study Reference
 - Branch offices
 - Staff and supervisors
