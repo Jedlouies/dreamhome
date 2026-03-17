@@ -1,0 +1,44 @@
+/*Auth Common Style*/
+
+.auth-container {
+    width: 98%;
+    place-items: center;
+    background-color: #2C2C2C;
+    padding: 10px;
+}
+
+.overlay {
+    background-color: rgba(133, 57, 83, .3); 
+    min-height: 100vh;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+}
+
+.banner {
+    width: 65%;
+    height: 98vh;
+    margin: 10px;
+}
+
+
+/*Signin Style*/
+
+.sign-in-container {
+    background-image: url('../../src/assets/modern-house.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.form {
+    width: 35%;
+    height: 98vh;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #F3F4F4;
+}
