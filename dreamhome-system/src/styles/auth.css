@@ -11,7 +11,7 @@
     background-color: rgba(133, 57, 83, .3); 
     min-height: 100vh;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 50px;
     display: flex;
 }
 
@@ -32,13 +32,13 @@
     background-attachment: fixed;
     height: 100vh;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 50px;
 }
 
 .form {
     width: 35%;
     height: 98vh;
     margin: 10px;
-    border-radius: 20px;
+    border-radius: 50px;
     background-color: #F3F4F4;
 }
