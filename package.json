@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Jedlouies/dreamhome/issues"
   },
-  "homepage": "https://github.com/Jedlouies/dreamhome#readme"
+  "homepage": "https://github.com/Jedlouies/dreamhome#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.102.1"
+  }
 }
