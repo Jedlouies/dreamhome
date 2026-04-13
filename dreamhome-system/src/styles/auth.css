@@ -1,44 +1,118 @@
-/*Auth Common Style*/
 
 .auth-container {
-    width: 98%;
+    width:50%;
+    background-color: #FFFFFF;
     place-items: center;
-    background-color: #2C2C2C;
-    padding: 10px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
 }
 
-.overlay {
-    background-color: rgba(133, 57, 83, .3); 
-    min-height: 100vh;
-    width: 100%;
-    border-radius: 50px;
+.auth-wrapper {
+    width: 80%;
+    height: 90%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
 }
 
-.banner {
-    width: 65%;
-    height: 98vh;
-    margin: 10px;
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.auth-wrapper h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #853953;
+    font-weight: 1000;
+}
+
+.auth-wrapper p a {
+    color: #646cff;
+    text-decoration: underline;
+    font-weight: 500;
+    color: #853953;
+}
+
+.auth-wrapper p {
+    opacity: 70%;
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.auth-wrapper .submit-btn button {
+    padding: 10px;
+    width: 50%;
+    background-color: #853953;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 
-/*Signin Style*/
+.social-account-divider {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
 
-.sign-in-container {
-    background-image: url('../../src/assets/modern-house.jpg');
+.social-account-btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.social-account-btns button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 50%;
+    background-color: transparent;
+    border: black solid 1px;
+    color: black;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.image-container {
+    width:50%;
+    background-color: #F3F4F4;
+    justify-items: center;
+    align-content: center;
+}
+
+.image-wrapper {
+    width: 80%;
+    height: 90%;
+    background-image: url('../assets/modern-house.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    width: 100%;
-    border-radius: 50px;
+    border-radius: 30px;
+    padding: 20px;
 }
 
-.form {
-    width: 35%;
-    height: 98vh;
-    margin: 10px;
-    border-radius: 50px;
-    background-color: #F3F4F4;
-}
+
+
+
+
+
+
