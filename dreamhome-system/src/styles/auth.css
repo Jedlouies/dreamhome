@@ -64,11 +64,15 @@
     cursor: pointer;
 }
 
+.auth-wrapper .submit-btn button:hover {
+    background-color: #6b2f45;
+}
+
 
 .social-account-divider {
     display: flex;
-    align-items: center;
-    justify-items: center;
+    align-content: center;
+    justify-content: center;
     text-align: center;
 }
 
@@ -78,6 +82,7 @@
     margin-top: 20px;
     gap: 30px;
 }
+
 
 .social-account-btns button {
     display: flex;
@@ -91,6 +96,11 @@
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+    gap: 10px;
+}
+
+.social-account-btns button:hover {
+    background-color: #f0f0f0;
 }
 
 .image-container {
