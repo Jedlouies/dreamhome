@@ -1,6 +1,50 @@
+import React from 'react';
+import { useState } from 'react';
+import { supabase } from '../../supabaseClient';
 import '../../styles/auth.css';
 
 function CreateAccount() {
+
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleCheckboxChange = () => {
+        setIsChecked(!isChecked);
+    }
+
+    const [formData, setFormData] = useState({
+        fname: '',
+        lname: '',
+        email: '',
+        password: ''
+    });
+
+    const handleInputChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    }
+
+    const handleCreateAccount = async (e) => {
+        e.preventDefault();
+
+        const { data, error} = await supabase.rpc('create_account_user', {
+            p_first_name: formData.fname,
+            p_last_name: formData.lname,
+            p_email: formData.email,    
+            p_password: formData.password
+        });
+
+        if (error) {
+            console.error('Error creating account:', error.message);
+        } else if (data && data[0].success) {
+            console.log('Account created successfully:', data[0].message);
+        } else {
+            console.error('Unexpected response:', data.message);
+        }
+
+    }
+    
   return (
         <>
         <div className='image-container'>
@@ -12,15 +56,23 @@ function CreateAccount() {
             <div className='auth-wrapper'>
                 <h2>Create Account</h2>
                 <p>Already have an account? <a href='/'>Sign In</a></p>
-                <form>
-                    <div className='input-group'>
-                        <input type='email' id='email' name='email' placeholder='Email' required />
+                <form onSubmit={handleCreateAccount}>
+                    <div className='input-groupv2'>
+                        <input type='text' id='fname' name='fname' placeholder='First Name' required value={formData.fname} onChange={handleInputChange}/>
+                        <input type='text' id='lname' name='lname' placeholder='Last Name' required value={formData.lname} onChange={handleInputChange}/>
                     </div>
                     <div className='input-group'>
-                        <input type='password' id='password' name='password' placeholder='Password' required />
+                        <input type='email' id='email' name='email' placeholder='Email' required value={formData.email} onChange={handleInputChange}/>
+                    </div>
+                    <div className='input-group'>
+                        <input type='password' id='password' name='password' placeholder='Password' required value={formData.password} onChange={handleInputChange}/>
+                    </div>
+                    <div className='input-groupv3'>
+                        <input type="checkbox" id="terms" name="terms" checked={isChecked} onChange={handleCheckboxChange} />
+                        <label htmlFor="terms">I agree to the <a href='/terms'>Terms of Service</a> and <a href='/privacy'>Privacy Policy</a></label>
                     </div>
                     <div className='submit-btn'>
-                        <button type='submit'>SUBMIT</button>
+                        {isChecked ? <button type='submit'>CREATE ACCOUNT</button> : <button type='submit' disabled style={{opacity: '50%', cursor: 'normal'}}>CREATE ACCOUNT</button>}
                     </div>
                     <div className='social-account-divider'>
                         <p>or continue with</p>
