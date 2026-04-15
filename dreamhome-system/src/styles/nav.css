@@ -1,0 +1,57 @@
+.supervisor-nav-container {
+    display: flex;
+    background-color: #F3F4F4;
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+
+.supervisor-nav-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.supervisor-nav-container .logo {
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    background-image: url('../../public/dreamhome-logo-colored.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.supervisor-nav-wrapper .nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.supervisor-nav-wrapper .nav-buttons button {
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.supervisor-nav-wrapper .nav-buttons button:hover {
+    color: #853953;
+    cursor: pointer;
+}
+
+.supervisor-nav-wrapper .nav-buttons .active {
+    color: #853953;
+    font-weight: 600;
+}
+
+.supervisor-nav-wrapper .profile-btn {
+    background-color: #853953;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    font-weight: 500;
+    text-decoration: none;
+}
