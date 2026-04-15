@@ -2,8 +2,10 @@ import React from 'react';
 import { useState } from 'react';
 import { supabase } from '../../supabaseClient';
 import '../../styles/auth.css';
+import { useNavigate } from 'react-router-dom';
 
 function CreateAccount() {
+    const navigate = useNavigate();
 
     const [isChecked, setIsChecked] = useState(false);
 
@@ -28,7 +30,7 @@ function CreateAccount() {
     const handleCreateAccount = async (e) => {
         e.preventDefault();
 
-        const { data, error} = await supabase.rpc('create_account_user', {
+        const { data, error} = await supabase.rpc('create_account_staff', {
             p_first_name: formData.fname,
             p_last_name: formData.lname,
             p_email: formData.email,    
@@ -39,6 +41,7 @@ function CreateAccount() {
             console.error('Error creating account:', error.message);
         } else if (data && data[0].success) {
             console.log('Account created successfully:', data[0].message);
+            navigate('/dashboard');
         } else {
             console.error('Unexpected response:', data.message);
         }
@@ -55,7 +58,7 @@ function CreateAccount() {
         <div className='auth-container'>
             <div className='auth-wrapper'>
                 <h2>Create Account</h2>
-                <p>Already have an account? <a href='/'>Sign In</a></p>
+                <p>Already have an account? <a href='/'>Login</a></p>
                 <form onSubmit={handleCreateAccount}>
                     <div className='input-groupv2'>
                         <input type='text' id='fname' name='fname' placeholder='First Name' required value={formData.fname} onChange={handleInputChange}/>

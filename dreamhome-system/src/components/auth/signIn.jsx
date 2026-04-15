@@ -1,6 +1,41 @@
 import '../../styles/auth.css';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { supabase } from '../../supabaseClient';    
 
 function SignIn() {
+    const navigate = useNavigate();
+
+    const [formData, setFormData] = useState({
+        email: '',
+        password: ''
+    });
+
+    const handleInputChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    }
+
+    const handleSignIn = async (e) => {
+        e.preventDefault();
+
+        const { data, error} = await supabase.rpc('sign_in_staff', {
+                    p_email: formData.email,    
+                    p_password: formData.password
+                });
+        
+                if (error) {
+                    console.error('Error signing in:', error.message);
+                } else if (data && data[0].success) {
+                    console.log('Signed in successfully:', data[0].message);
+                    navigate('/dashboard');
+                } else {
+                    console.error('Unexpected response:', data.message);
+                }
+    }
+
   return (
         <>
         <div className='image-container'>
@@ -12,13 +47,13 @@ function SignIn() {
             <div className='auth-wrapper'>
                 <h2>Login</h2>
                 <p>Don't have an account? <a href='/create-account'>Create an Account</a></p>
-                <form>
+                <form onSubmit={handleSignIn}>
                     <div className='input-group'>
-                        <input type='email' id='email' name='email' placeholder='Email' required />
-                    </div>
+                            <input type='email' id='email' name='email' placeholder='Email' required onChange={handleInputChange} value={formData.email}/>
+                        </div>
                     <div className='input-group'>
-                        <input type='password' id='password' name='password' placeholder='Password' required />
-                    </div>
+                            <input type='password' id='password' name='password' placeholder='Password' required onChange={handleInputChange} value={formData.password}/>
+                        </div>
                     <div className='submit-btn'>
                         <button type='submit'>SUBMIT</button>
                     </div>
