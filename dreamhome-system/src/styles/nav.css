@@ -55,3 +55,28 @@
     font-weight: 500;
     text-decoration: none;
 }
+
+
+@media (max-width: 768px) {
+    .supervisor-nav-container {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .supervisor-nav-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .supervisor-nav-wrapper .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .supervisor-nav-wrapper .profile-btn {
+        width: 30px;
+        display: none;
+        height: 30px;
+    }
+}
