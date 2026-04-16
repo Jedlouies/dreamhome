@@ -16,6 +16,7 @@
 
 .welcome-content {
     padding: 5px;
+    margin: 0;
     border-radius: 10px;
 }
 
@@ -50,6 +51,73 @@
     width: 50%;
     background-color: #F3F4F4;
     border-radius: 20px;
+}
+
+.inner-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 5px;
+}
+
+.upper-card .ratings {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+    background-color: greenyellow;
+    width: 40%;
+    height: 50%;
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.lower-card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: left;
+    font-size: small;
+    padding: 10px;
+}
+
+.lower-card span {
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.lower-card p {
+    margin: 0;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+
+
+.upper-card {
+    display: flex;
+    width: 90%;
+    text-align: left;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.icon-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .left-content .card-long {

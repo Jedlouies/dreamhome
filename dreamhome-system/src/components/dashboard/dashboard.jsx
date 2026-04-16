@@ -29,19 +29,71 @@ function dashboard() {
                         <div className='cards-wrapper'>
                             <div className='cards-container'>
                                 <div className='card'>
-
+                                    <div className='inner-card-wrapper'>
+                                        <div className='upper-card'>
+                                            <div className='icon-box'>
+                                                <img src="/house.png" alt="properties" />
+                                            </div>
+                                            <div className='ratings'>
+                                                <span>23.35% ↑</span>
+                                            </div>
+                                        </div>
+                                        <div className='lower-card'>
+                                            <span>10</span>
+                                            <p>Total Properties</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className='card'>
-
+                                    <div className='inner-card-wrapper'>
+                                        <div className='upper-card'>
+                                            <div className='icon-box'>
+                                                <img src="/house.png" alt="properties" />
+                                            </div>
+                                            <div className='ratings'>
+                                                <span>23.35% ↑</span>
+                                            </div>
+                                        </div>
+                                        <div className='lower-card'>
+                                            <span>10</span>
+                                            <p>Total Properties</p>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
                             <div className='cards-container'>
                                 <div className='card'>
-
+                                    <div className='inner-card-wrapper'>
+                                        <div className='upper-card'>
+                                            <div className='icon-box'>
+                                                <img src="/house.png" alt="properties" />
+                                            </div>
+                                            <div className='ratings'>
+                                                <span>23.35% ↑</span>
+                                            </div>
+                                        </div>
+                                        <div className='lower-card'>
+                                            <span>10</span>
+                                            <p>Total Properties</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className='card'>
-
+                                    <div className='inner-card-wrapper'>
+                                        <div className='upper-card'>
+                                            <div className='icon-box'>
+                                                <img src="/house.png" alt="properties" />
+                                            </div>
+                                            <div className='ratings'>
+                                                <span>23.35% ↑</span>
+                                            </div>
+                                        </div>
+                                        <div className='lower-card'>
+                                            <span>10</span>
+                                            <p>Total Properties</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
