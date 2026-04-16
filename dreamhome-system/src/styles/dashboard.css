@@ -1,7 +1,7 @@
 .dashboard-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     background-color: #FFFFFF;
 }
@@ -9,14 +9,20 @@
 .dashboard-content {
     display: flex;
     flex-direction: column;
+    height: auto;
     padding: 20px;
     gap: 20px;
 }
 
 .welcome-content {
-    background-color: #F3F4F4;
-    padding: 20px;
+    padding: 5px;
     border-radius: 10px;
+}
+
+.welcome-content p {
+    margin: 0;
+    opacity: 0.5;
+    font-style: italic;
 }
 
 .main-content {
@@ -25,10 +31,51 @@
 }
 
 .left-content {
+    display: flex;
+    flex-direction: column;
     width: 70%;
+    height: 75vh;
+    gap: 10px;
+}
+
+.left-content .cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 40vh;
+    gap: 2vh;
+}
+
+.cards-container .card {
+    width: 50%;
     background-color: #F3F4F4;
-    padding: 20px;
-    border-right: 1px solid #bcbcbc;
+    border-radius: 20px;
+}
+
+.left-content .card-long {
+    background-color: #F3F4F4;
+    width: 40%;
+    height: 40vh;
+
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+}
+
+.left-content .cards-container {
+    display: flex;
+    width: 100%;
+    height: 25vh;
+    gap: 15px;
+}
+
+.chart-container {
+    width: 100%;
+    height: 100%;
+    background-color: #F3F4F4;
 }
 
 .right-content {

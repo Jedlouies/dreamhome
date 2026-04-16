@@ -20,11 +20,38 @@ function dashboard() {
         <SupervisorNav />
         <div className='dashboard-content'>
             <div className='welcome-content'>
-                <h1>Hello, {user.firstName} {user.lastName}</h1>
+                <h1>Hello there, <span style={{color: '#853953'}}>{user.firstName}!</span></h1>
+                <p>Check the current records and manage your tasks.</p>
             </div>
             <div className='main-content'>
                 <div className='left-content'>
+                    <div className='content-wrapper'>
+                        <div className='cards-wrapper'>
+                            <div className='cards-container'>
+                                <div className='card'>
 
+                                </div>
+                                <div className='card'>
+
+                                </div>
+
+                            </div>
+                            <div className='cards-container'>
+                                <div className='card'>
+
+                                </div>
+                                <div className='card'>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className='card-long'>
+
+                        </div>
+                    </div>
+                    <div className='chart-container'>
+
+                    </div>
                 </div>
                 <div className='right-content'>
 
