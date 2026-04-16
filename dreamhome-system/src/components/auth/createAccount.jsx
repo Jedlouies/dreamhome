@@ -13,6 +13,7 @@ function CreateAccount() {
         setIsChecked(!isChecked);
     }
 
+
     const [formData, setFormData] = useState({
         fname: '',
         lname: '',
@@ -41,7 +42,7 @@ function CreateAccount() {
             console.error('Error creating account:', error.message);
         } else if (data && data[0].success) {
             console.log('Account created successfully:', data[0].message);
-            navigate('/dashboard');
+            navigate('/');
         } else {
             console.error('Unexpected response:', data.message);
         }

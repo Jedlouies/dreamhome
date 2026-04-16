@@ -21,21 +21,29 @@ function SignIn() {
     const handleSignIn = async (e) => {
         e.preventDefault();
 
-        const { data, error} = await supabase.rpc('sign_in_staff', {
-                    p_email: formData.email,    
-                    p_password: formData.password
-                });
-        
-                if (error) {
-                    console.error('Error signing in:', error.message);
-                } else if (data && data[0].success) {
-                    console.log('Signed in successfully:', data[0].message);
-                    navigate('/dashboard');
-                } else {
-                    console.error('Unexpected response:', data.message);
-                }
-    }
+        const { data, error } = await supabase.rpc('sign_in_staff', {
+            p_email: formData.email,
+            p_password: formData.password
+        });
 
+        if (error) {
+            alert('Error: ' + error.message);
+        } else if (data && data[0].success) {
+            const userInfo = {
+                id: data[0].staffno,
+                firstName: data[0].firstname,
+                lastName: data[0].lastname,
+                email: formData.email 
+            };
+                
+            localStorage.setItem('staffUser', JSON.stringify(userInfo));
+
+            console.log('Signed in successfully:', userInfo.firstName);
+            navigate('/dashboard');
+        } else {
+            alert('Invalid email or password');
+        }
+    };
   return (
         <>
         <div className='image-container'>

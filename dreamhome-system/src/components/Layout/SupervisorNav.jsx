@@ -16,7 +16,7 @@ function SupervisorNav() {
                 <button>INSPECTIONS</button>
                 <button>REPORTS</button>
                 <div className='profile-btn'>
-          
+                
                 </div>
             </div>
         </div>
