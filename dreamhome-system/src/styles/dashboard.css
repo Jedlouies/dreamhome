@@ -192,6 +192,64 @@
     border-radius: 20px;
 }
 
+.upper-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 5px;
+}
+
+.upper-content-wrapper p {
+    margin: 0;
+    opacity: 0.5;
+    font-size: small;
+    font-style: italic;
+}
+
+.upper-content-wrapper h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.lower-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 5px;
+}
+
+.lower-content-wrapper h3 {
+    margin: 0;
+}
+
+.lower-content-wrapper .buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lower-content-wrapper .buttons-container button {
+    display: flex;
+    background-color: white;
+    border: none;
+    text-align: center;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.lower-content-wrapper .buttons-container button:hover {
+    background-color: #853953;
+    scale: 1.05;
+    color: white;
+    cursor: pointer;
+}
+
+
 .right-content .lower-content {
     background-color: #F3F4F4;
     border-radius: 20px;
