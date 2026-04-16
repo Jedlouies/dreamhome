@@ -40,7 +40,7 @@ function dashboard() {
                                         </div>
                                         <div className='lower-card'>
                                             <span>10</span>
-                                            <p>Total Properties</p>
+                                            <p>Total Properties Managed</p>
                                         </div>
                                     </div>
                                 </div>
@@ -48,15 +48,15 @@ function dashboard() {
                                     <div className='inner-card-wrapper'>
                                         <div className='upper-card'>
                                             <div className='icon-box'>
-                                                <img src="/house.png" alt="properties" />
+                                                <img src="/real-estate.png" alt="active-leases" />
                                             </div>
                                             <div className='ratings'>
-                                                <span>23.35% ↑</span>
+                                                <span>35.5% ↑</span>
                                             </div>
                                         </div>
                                         <div className='lower-card'>
-                                            <span>10</span>
-                                            <p>Total Properties</p>
+                                            <span>1023</span>
+                                            <p>Active Leases</p>
                                         </div>
                                     </div>
                                 </div>
@@ -67,15 +67,15 @@ function dashboard() {
                                     <div className='inner-card-wrapper'>
                                         <div className='upper-card'>
                                             <div className='icon-box'>
-                                                <img src="/house.png" alt="properties" />
+                                                <img src="/deal.png" alt="properties" />
                                             </div>
                                             <div className='ratings'>
-                                                <span>23.35% ↑</span>
+                                                <span>6.35% ↑</span>
                                             </div>
                                         </div>
                                         <div className='lower-card'>
-                                            <span>10</span>
-                                            <p>Total Properties</p>
+                                            <span>303</span>
+                                            <p>Currently Available</p>
                                         </div>
                                     </div>
                                 </div>
@@ -83,14 +83,14 @@ function dashboard() {
                                     <div className='inner-card-wrapper'>
                                         <div className='upper-card'>
                                             <div className='icon-box'>
-                                                <img src="/house.png" alt="properties" />
+                                                <img src="/city.png" alt="total properties" />
                                             </div>
                                             <div className='ratings'>
-                                                <span>23.35% ↑</span>
+                                                <span>1.35% ↑</span>
                                             </div>
                                         </div>
                                         <div className='lower-card'>
-                                            <span>10</span>
+                                            <span>623</span>
                                             <p>Total Properties</p>
                                         </div>
                                     </div>
@@ -98,7 +98,10 @@ function dashboard() {
                             </div>
                         </div>
                         <div className='card-long'>
-
+                            <div className='card-long-wrapper'>
+                                <h3>Pending Inspection</h3>
+                                <p>Pending Inspection Last 6 Days</p>
+                            </div>
                         </div>
                     </div>
                     <div className='chart-container'>
@@ -106,7 +109,12 @@ function dashboard() {
                     </div>
                 </div>
                 <div className='right-content'>
+                    <div className='upper-content'>
 
+                    </div>
+                    <div className='lower-content'>
+
+                    </div>
                 </div>
             </div>
         </div>

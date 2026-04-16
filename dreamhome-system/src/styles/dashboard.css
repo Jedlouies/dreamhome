@@ -53,6 +53,11 @@
     border-radius: 20px;
 }
 
+.cards-container .card:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
 .inner-card-wrapper {
     display: flex;
     flex-direction: column;
@@ -73,6 +78,15 @@
     text-align: center;
     justify-content: center;
     border-radius: 20px;
+}
+
+.card-long-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
 }
 
 .lower-card {
@@ -124,9 +138,27 @@
     background-color: #F3F4F4;
     width: 40%;
     height: 40vh;
-
+    border-radius: 20px;
 }
 
+.card-long:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.card-long-wrapper p {
+    margin: 0;
+    opacity: 0.5;
+    font-size: small;
+    font-style: italic;
+}
+
+
+.card-long-wrapper h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bolder;
+}
 .content-wrapper {
     display: flex;
     gap: 20px;
@@ -147,7 +179,28 @@
 }
 
 .right-content {
+    display: flex;
+    flex-direction: column;
     width: 30%;
+    gap: 10px;
+}
+
+.right-content .upper-content {
+    width: 100%;
+    height: 60%;
     background-color: #F3F4F4;
-    padding: 20px;
+    border-radius: 20px;
+}
+
+.right-content .lower-content {
+    background-color: #F3F4F4;
+    border-radius: 20px;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-content .lower-content:hover, .right-content .upper-content:hover {
+    scale: 1.05;
+    cursor: pointer;
 }
