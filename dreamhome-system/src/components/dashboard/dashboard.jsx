@@ -1,6 +1,8 @@
 import React from 'react'
 import SupervisorNav from '../Layout/SupervisorNav';
 import { useState, useEffect } from 'react';
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { supabase } from '../../supabaseClient';
 import '../../styles/dashboard.css';
 
@@ -14,6 +16,26 @@ function dashboard() {
             setUser(JSON.parse(savedUser));
         }
     }, []);
+
+    const pieData = [
+        { name: 'House', value: 400 },
+        { name: 'Flat', value: 300 },
+    ];
+
+    const lineData = [
+    { name: 'Jan', branchA: 0, branchB: 0, branchC: 0 },
+    { name: 'Feb', branchA: 150, branchB: 80, branchC: 40 },
+    { name: 'Mar', branchA: 100, branchB: 120, branchC: 60 },
+    { name: 'Apr', branchA: 200, branchB: 160, branchC: 150 },
+    { name: 'May', branchA: 180, branchB: 240, branchC: 220 },
+    { name: 'Jun', branchA: 160, branchB: 210, branchC: 180 },
+    { name: 'Jul', branchA: 230, branchB: 180, branchC: 140 },
+    { name: 'Aug', branchA: 200, branchB: 230, branchC: 90 },
+    { name: 'Sept', branchA: 170, branchB: 110, branchC: 190 },
+    { name: 'Oct', branchA: 250, branchB: 90, branchC: 140 },
+    ];
+
+    const COLORS = ['#853953', '#d9a7b8'];
 
   return (
     <div className='dashboard-container'>
@@ -105,7 +127,56 @@ function dashboard() {
                         </div>
                     </div>
                     <div className='chart-container'>
-
+                        <div style={{ padding: '20px' }}>
+                            <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold' }}>Branch Performance</h3>
+                            <p style={{ margin: '0 0 20px 0', color: '#888', fontSize: '14px' }}>Track Branches Performance</p>
+                            
+                            <div style={{ width: '100%', height: 130 }}>
+                                <ResponsiveContainer width="100%" height="100%">
+                                    <LineChart data={lineData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#eee" />
+                                        
+                                        <XAxis 
+                                            dataKey="name" 
+                                            axisLine={true} 
+                                            tickLine={false} 
+                                            label={{ value: 'Lease Activity Overtime', position: 'insideBottom', offset: -5 }}
+                                        />
+                                        
+                                        <YAxis 
+                                            axisLine={true} 
+                                            tickLine={false} 
+                                            label={{ value: 'Total Active Leases', angle: -90, position: 'insideLeft' }}
+                                        />
+                                        
+                                        <Tooltip />
+                                        
+                                        <Line 
+                                            type="monotone" 
+                                            dataKey="branchA" 
+                                            stroke="#5c2035" 
+                                            strokeWidth={3} 
+                                            dot={false} 
+                                            activeDot={{ r: 8 }} 
+                                        />
+                                        <Line 
+                                            type="monotone" 
+                                            dataKey="branchB" 
+                                            stroke="#e91e63" 
+                                            strokeWidth={3} 
+                                            dot={false} 
+                                        />
+                                        <Line 
+                                            type="monotone" 
+                                            dataKey="branchC" 
+                                            stroke="#f06292" 
+                                            strokeWidth={3} 
+                                            dot={false} 
+                                        />
+                                    </LineChart>
+                                </ResponsiveContainer>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className='right-content'>
@@ -113,6 +184,28 @@ function dashboard() {
                         <div className='upper-content-wrapper'>
                             <h3>Property Statistics</h3>
                             <p>Track Properties</p>
+
+                            <div style={{ width: '100%', height: 250 }}>
+                                    <ResponsiveContainer>
+                                        <PieChart>
+                                            <Pie
+                                                data={pieData}
+                                                cx="50%"
+                                                cy="50%"
+                                                innerRadius={60}
+                                                outerRadius={80}
+                                                paddingAngle={5}
+                                                dataKey="value"
+                                            >
+                                                {pieData.map((entry, index) => (
+                                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                                ))}
+                                            </Pie>
+                                            <Tooltip />
+                                            <Legend verticalAlign="bottom" height={36}/>
+                                        </PieChart>
+                                    </ResponsiveContainer>
+                                </div>
                         </div>
                     </div>
                     <div className='lower-content'>
