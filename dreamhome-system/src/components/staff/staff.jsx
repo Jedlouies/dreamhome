@@ -32,23 +32,26 @@ function Staff() {
                 onClick={toggleDropdown}
               >
                 <div className='button-square'></div>
-                {selectedBranch}
-                <span className={`arrow ${isOpen ? 'up' : 'down'}`}> ▾ </span>
+                {selectedBranch}                  
+                <span style={{ marginLeft: 'auto' }} className={`arrow ${isOpen ? 'up' : 'down'}`}> ▾ </span>
               </button>
 
               {isOpen && (
                 <ul className="dropdown-menu">
                   {branches.map((branch) => (
-                    <li 
+                    <ul 
                       key={branch} 
                       onClick={() => handleSelect(branch)}
                       className="dropdown-item"
                     >
                       {branch}
-                    </li>
+                    </ul>
                   ))}
                 </ul>
               )}
+            </div>
+            <div className='staff-add-btn'>
+              <button className='add-btn'>Add Staff</button>
             </div>
           </div>
         </div>
