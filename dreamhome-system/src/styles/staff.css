@@ -61,6 +61,21 @@
     width: 100%;
 }
 
+.staff-add-btn button{
+    display: flex;
+    border: #853953 2px solid;
+    border-radius: 10px;
+    color: #853953;
+    gap: 5px;
+    align-items: center;
+}
+
+.staff-add-btn button:hover {
+    background-color: #853953;
+    color: white;
+    cursor: pointer;
+}
+
 
 .branch-selection-btn {
     background-color: white;
@@ -78,6 +93,10 @@
     gap: 10px;
 }
 
+.branch-selection-btn:hover {
+    cursor: pointer;
+}
+
 
  
 .button-square {
@@ -91,14 +110,20 @@
     position: absolute;
     background-color: white;
     border: 1px solid #ddd;
+    color: #853953;
     border-radius: 5px;
     margin-top: 40px;
     text-align: left;
-    width: 30%;
+    width: 25%;
     z-index: 1;
 }
 
 .dropdown-item {
     padding: 10px;
     cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #853953;
+    color: #FFFFFF;
 }
