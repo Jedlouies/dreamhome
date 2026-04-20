@@ -1,0 +1,7 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    width: 100%;
+    background-color: #FFFFFF;
+}
